@@ -13,7 +13,30 @@ If a trust relationship does not exist in trust array, then such a trust relatio
 Return the label of the town judge if the town judge exists and can be identified, or return -1 otherwise.
 """
 def findJudge(n, trust):
-    pass
+    trusts = {}
+
+    for a, b in trust:
+        if a in trusts:
+            trusts[a]['trustees'].append(b)
+        else:
+            trusts[a] = {
+                'trustees': [b],
+                'trusters': []
+            }
+        if b in trusts:
+            trusts[b]['trusters'].append(a)
+        else:
+            trusts[b] = {
+                'trustees': [],
+                'trusters': [a]
+            }
+
+    for el, trust_table in trusts.items():
+        cnt = n - 1
+        if not len(trust_table['trustees']) and len(trust_table['trusters']) == cnt:
+            return el
+    return -1
+
 
 test_a = [2, [[1,2]]]
 test_b = [3, [[1,3], [2,3]]]
