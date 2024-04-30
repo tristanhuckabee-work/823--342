@@ -7,10 +7,7 @@ You can return the answer in any order.
 """
 def twoSum(nums, target):
     for i, num in enumerate(nums):
-        print(i)
-        print(target - num)
-        comp = nums[i + 1:].index(target - num)
-        print(i, comp)
+        comp = nums.index(target - num)
         if comp != -1 and comp != i:
             return [i, comp]
 
