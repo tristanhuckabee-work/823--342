@@ -4,6 +4,9 @@
 # length.
 
 # Write your code here.
+def merge_lists(keys, vals):
+    return {el:vals[i] for i, el in enumerate(keys)}
+
 
 lst1 = ['a', 'b']
 lst2 = [1, 2]

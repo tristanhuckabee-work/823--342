@@ -2,6 +2,8 @@
 # otherwise.
 
 # Write your function here.
+def is_empty(dict):
+    return not bool( len(dict) )
 
 print(is_empty({}))        #> True
 print(is_empty({"a": 1}))  #> False

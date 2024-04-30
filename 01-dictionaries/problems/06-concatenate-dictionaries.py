@@ -5,7 +5,10 @@
 
 # Write your code here.
 def concatenate_dictionaries(lst):
-    pass
+    res = {}
+    for d in lst:
+        res = {**res, **d}
+    return res
 
 lst = [
     {
