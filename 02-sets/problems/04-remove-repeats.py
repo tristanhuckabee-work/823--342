@@ -3,7 +3,19 @@
 
 # Write your code here.
 def remove_repeats(str1, str2):
-    pass
+    xor = set()
+
+    for char in str1:
+        if str2.find(char) == -1:
+            xor.add(char)
+    for char in str2:
+        if str1.find(char) == -1:
+            xor.add(char)
+
+    return xor
+
+
+
 
 str1 = 'aloha'
 str2 = 'bonjour'

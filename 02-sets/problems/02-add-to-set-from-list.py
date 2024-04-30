@@ -3,7 +3,7 @@
 
 # Write your code here.
 def add_to_set(st, lst):
-    pass
+    return set([*list(st), *lst])
 
 st = { 1, 2, 3, 4 }
 lst = [12, 4, 42, 93, 2, 85]

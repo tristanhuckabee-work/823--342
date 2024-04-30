@@ -4,7 +4,15 @@
 
 # Write your code here.
 def left_diff(set1, set2):
-    pass
+    # return set1 - set2
+
+    res = set()
+
+    for el in list(set1):
+        if el not in set2:
+            res.add(el)
+    
+    return res
 
 set1 = { 1, 2, 5, 10 }
 set2 = { 2, 6, 10, 12 }

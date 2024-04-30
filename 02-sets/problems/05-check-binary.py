@@ -4,7 +4,9 @@
 
 # Write your code here.
 def check_binary(str):
-    pass
+    binary = set(['0', '1'])
+    chars = set(str)
+    return not bool(list(chars - binary))
 
 str1 = '1010001010010100101'
 str2 = '1010010015010101010'
